@@ -59,16 +59,17 @@ const Converter = (props) => {
             <TextInput
                 style={{ margin: 12 }}
                 placeholder="Enter EUR Value"
+                keyboardType='numeric'
                 placeholderTextColor='red'
                 onChangeText={(text) => {
                     changeTextInput(text);
                 }} />
             <View style={{ margin: 8 }}>
-                <Text>TRY : {dateResponse.TRY}</Text>
-                <Text>USD : {dateResponse.USD}</Text>
-                <Text>CAD : {dateResponse.CAD}</Text>
-                <Text>JPY : {dateResponse.JPY}</Text>
-                <Text>EUR : {dateResponse.EUR}</Text>
+                <Text>TRY : {dateResponse.TRY.toFixed(3)}</Text>
+                <Text>USD : {dateResponse.USD.toFixed(3)}</Text>
+                <Text>CAD : {dateResponse.CAD.toFixed(3)}</Text>
+                <Text>JPY : {dateResponse.JPY.toFixed(3)}</Text>
+                <Text>EUR : {dateResponse.EUR.toFixed(3)}</Text>
             </View>
         </View>
     )
